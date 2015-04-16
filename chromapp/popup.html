@@ -1,0 +1,31 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+-->
+<html>
+<head>
+  <title>Getting Started Extension's Popup</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font: 13px Helvetica, Arial;width: 400px; height: 400px;}
+    .myform { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+    .myform input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+    .myform button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+    #messages { list-style-type: none; margin: 0; padding: 0; }
+    #messages li { padding: 5px 10px; }
+    #messages li:nth-child(odd) { background: #eee; }
+  </style>
+    <script src="socket.io-1.2.0.js"></script>
+    <script src="jquery-1.11.1.js"></script>
+    <script src="scripts.js"></script>
+  </head>
+  <body>
+    <ul id="messages"></ul>
+    <div class="myform">
+      <input id="m" autocomplete="off" /><button id="mybutton">Send</button>
+    </div>
+  </body>
+  </html>
+
